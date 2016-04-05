@@ -1,0 +1,11 @@
+.ongoingTransactions, .balance {
+  display: none;
+}
+.holder {
+  cursor: pointer;
+  color: #0088cc;
+}
+
+.holder:hover {
+  text-decoration: underline;
+}
