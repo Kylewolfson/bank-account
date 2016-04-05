@@ -7,8 +7,6 @@ var accounts = [];
 
 $(document).ready(function() {
 
-  var balance = 0;
-
   $("#initialDeposit").submit(function(event) {
     event.preventDefault();
     $(".ongoingTransactions").show();
@@ -23,11 +21,11 @@ $(document).ready(function() {
     $("#currentUser").text(newAccount.holder);
 
     accounts.push(newAccount);
-    console.log(accounts);
 
-    $(".holder").last().click(function() {
-      $("#currentBalance").text(newAccount.balance);
-      $("#currentUser").text(newAccount.holder);
+    $(".holder").click(function() {
+      $("#currentBalance").text(accounts[0].balance);
+      $("#currentUser").text(accounts[0].holder);
+
     });
 
 
